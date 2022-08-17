@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
 
-/*
-font-family: 'Fraunces', serif;
-font-family: 'Montserrat', sans-serif;
-*/
-
 body {
     background-color: hsl(30, 38%, 92%);
 }
@@ -16,10 +11,14 @@ body {
     border-radius: 10px;
 }
 
-img {
+.mobile-img {
     width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+.desktop-img {
+    display: none;
 }
 
 .information {
@@ -99,4 +98,39 @@ img {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 426px) {
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .mobile-img {
+        display: none;
+    }
+
+    .card {
+        display: flex;
+        max-width: 550px;
+        margin: 10rem auto 1.5em;
+    }
+
+    .desktop-img {
+        display: block;
+        width: 100%;
+        object-fit: contain;
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+
+    .image {
+        width: 49%;
+    }
+
+    .information {
+        width: 49%;
+        padding: .1em 1.5em;
+    }
 }
